@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="InstallmentScheduleService" targetNamespace="http://www.allstate.com/billing/BillingCalculationService/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.allstate.com/billing/BillingCalculationService/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IBIService_policy">
+    <wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken RequireClientCertificate="false"/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout></wsp:Policy></sp:TransportBinding></wsp:All></wsp:ExactlyOne></wsp:Policy>
+<wsdl:types>
+  <xsd:schema targetNamespace="http://www.allstate.com/billing/BillingCalculationService/v1/Imports">
+    <xsd:import schemaLocation="https://ipssvc.allstate.com/CalculationsSvc/V01/InstallmentScheduleService.svc?xsd=xsd0" namespace="http://www.allstate.com/billing/BillingCalculationService/v1"/>
+    <xsd:import schemaLocation="https://ipssvc.allstate.com/CalculationsSvc/V01/InstallmentScheduleService.svc?xsd=xsd1" namespace="http://allstate.com/xml/standard/soapHeader/v1"/>
+  </xsd:schema>
+</wsdl:types>
+<wsdl:message name="ALGetInstallmentScheduleRq_Type">
+  <wsdl:part name="parameters" element="tns:ALGetInstallmentScheduleRq_Type"/>
+</wsdl:message>
+<wsdl:message name="ALGetInstallmentScheduleRq_Type_Headers">
+  <wsdl:part name="msgHeader" element="q1:msgHeader" xmlns:q1="http://allstate.com/xml/standard/soapHeader/v1"/>
+</wsdl:message>
+<wsdl:message name="ALGetInstallmentScheduleRs_Type">
+  <wsdl:part name="parameters" element="tns:ALGetInstallmentScheduleRs_Type"/>
+</wsdl:message>
+<wsdl:portType name="IBIService">
+  <wsdl:operation name="GetInstallmentSchedule">
+  <wsdl:input wsaw:Action="http://www.allstate.com/billing/BillingCalculationService/v1/IBIService/GetInstallmentSchedule" name="ALGetInstallmentScheduleRq_Type" message="tns:ALGetInstallmentScheduleRq_Type"/>
+<wsdl:output wsaw:Action="http://www.allstate.com/billing/BillingCalculationService/v1/IBIService/GetInstallmentScheduleResponse" name="ALGetInstallmentScheduleRs_Type" message="tns:ALGetInstallmentScheduleRs_Type"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="BasicHttpBinding_IBIService" type="tns:IBIService">
+  <wsp:PolicyReference URI="#BasicHttpBinding_IBIService_policy"/>
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+  <wsdl:operation name="GetInstallmentSchedule">
+    <soap:operation soapAction="http://www.allstate.com/billing/BillingCalculationService/v1/IBIService/GetInstallmentSchedule" style="document"/>
+    <wsdl:input name="ALGetInstallmentScheduleRq_Type">
+      <soap:header message="tns:ALGetInstallmentScheduleRq_Type_Headers" part="msgHeader" use="literal"/>
+      <soap:body use="literal"/>
+    </wsdl:input>
+    <wsdl:output name="ALGetInstallmentScheduleRs_Type">
+      <soap:body use="literal"/>
+    </wsdl:output>
+  </wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="InstallmentScheduleService">
+  <wsdl:port name="BasicHttpBinding_IBIService" binding="tns:BasicHttpBinding_IBIService">
+    <soap:address location="https://ipssvc.allstate.com/CalculationsSvc/V01/InstallmentScheduleService.svc"/>
+  </wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

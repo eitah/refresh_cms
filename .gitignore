@@ -1,0 +1,24 @@
+# Java
+**/build/
+.gradle/
+gbs-domain/generated-sources/*
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+**/.idea/
+
+# OSX
+**/.DS_Store
+
+# JS front end (Node, bower, etc...)
+**/node_modules
+**/npm-debug.log
+/*/lib
+/ui/coverage
+/*/dist
+
+# Misc
+*.log
+*.log*

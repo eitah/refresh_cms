@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Nina Abaya (Allstate Insurance Company) -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.allstate.com/product/PolicyInquiry/v2" xmlns:ns="http://allstate.com/xml/standard/soapHeader/v1" targetNamespace="http://www.allstate.com/product/PolicyInquiry/v2">
+	<wsdl:import namespace="http://allstate.com/xml/standard/soapHeader/v1" location="allstate_SOAP_header_v1.xsd"/>
+	<wsdl:types>
+		<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.allstate.com/product/PolicyInquiry/v2" elementFormDefault="qualified">
+			<xsi:include schemaLocation="PolicyInquiry_v2.xsd"/>
+		</xsi:schema>
+	</wsdl:types>
+	<wsdl:message name="msgRetrievePolicyRequest">
+		<wsdl:part name="policyIn" element="tns:PolicyInquiryRq"/>
+	</wsdl:message>
+	<wsdl:message name="msgRetrievePolicyResponse">
+		<wsdl:part name="policyOut" element="tns:PolicyInquiryRs"/>
+	</wsdl:message>
+	<wsdl:message name="msgHeader">
+		<wsdl:part name="header" element="ns:msgHeader"/>
+	</wsdl:message>
+	<wsdl:portType name="PolicyInquiry">
+		<wsdl:operation name="retrievePolicy">
+			<wsdl:input message="tns:msgRetrievePolicyRequest"/>
+			<wsdl:output message="tns:msgRetrievePolicyResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PolicyInquirySOAPBindingV2" type="tns:PolicyInquiry">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="retrievePolicy">
+			<soap:operation soapAction="http://www.allstate.com/product/PolicyInquiry/retrievePolicy" style="document"/>
+			<wsdl:input>
+				<soap:body parts="policyIn" use="literal"/>
+				<soap:header message="tns:msgHeader" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="policyOut" use="literal"/>
+				<soap:header message="tns:msgHeader" part="header" use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PolicyInquiryServiceV2">
+		<wsdl:port name="PolicyInquiryService" binding="tns:PolicyInquirySOAPBindingV2">
+			<soap:address location="https://sgglint-dv.allstate.com/sg/a2a/APT/Alliance/PolicyInquiryServices/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,2409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:ns1="http://allstate.com/xml/standard/soapHeader/v1" xmlns:tns="http://xmlns.example.com/1384803924731" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.allstate.com/billing/billingInquiryService/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Untitled" targetNamespace="http://xmlns.example.com/1384803924731">
+    <wsdl:types>
+        <xsd:schema xmlns:blg="http://www.allstate.com/billing/billingInquiryService/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.allstate.com/billing/billingInquiryService/v1" version="1.15" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xsd:annotation xmlns="http://cortexml.com/deployment">
+                <xsd:appinfo>
+                    <date>2016-05-03T16:26:01.302+01:00</date>
+                    <release>sv-billing-inquiry-rel-48</release>
+                    <cabinet>sv-billing-inquiry-2x</cabinet>
+                    <build>sv-billing-inquiry-2x-build-68</build>
+                </xsd:appinfo>
+                <xsd:documentation>      	The declarations in this file are auto-generated
+	from an object model under management by Ignite.
+	You are advised not to modify this file. If you need
+	to make any modifications, apply your edits to the
+	object model in the Ignite repository and generate
+	a new release.
+
+    </xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType name="AL.Addr_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:Addr_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:AddrExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.AnnualizedAdjustedPremiumInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:BusinessProcessChannelCd" minOccurs="0"/>
+                    <xsd:element ref="blg:DownPaymentPct" minOccurs="0"/>
+                    <xsd:element ref="blg:EBillEnrollmentDt" minOccurs="0"/>
+                    <xsd:element ref="blg:FullPayAAPDiscountAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:FullPayAAPEligibilityDiscountCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TermInstallmentsCount" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:AnnualizedAdjustedPremiumInfoExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BalanceInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BalanceInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:NextBillTypeCd" minOccurs="0"/>
+                            <xsd:element ref="blg:NextActivityCd" minOccurs="0"/>
+                            <xsd:element ref="blg:NextActivityDt" minOccurs="0"/>
+                            <xsd:element ref="blg:CurrentDueAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:SPPPayorCd" minOccurs="0"/>
+                            <xsd:element ref="blg:LastBillTypeCd" minOccurs="0"/>
+                            <xsd:element ref="blg:LastBillDueDt" minOccurs="0"/>
+                            <xsd:element ref="blg:LastBillIssueDt" minOccurs="0"/>
+                            <xsd:element ref="blg:LastBillMinimumDueAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:LastBillPayInFullAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:PreviousBalanceAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:PastDueAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:PastDueDt" minOccurs="0"/>
+                            <xsd:element ref="blg:FullPayAAPBalanceAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:FullPayAAPAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:PayInFullBalanceAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BalanceInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BankInfoByABANumberRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:BankId"/>
+                    <xsd:element ref="blg:TransactionRequestDt" minOccurs="0"/>
+                    <xsd:element ref="blg:TransactionEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:InputChannelCd" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BankInfoRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:TransactionResponseDt" minOccurs="0"/>
+                    <xsd:element ref="blg:TransactionEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:MsgStatus" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BankInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BankInfoRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BankInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BankInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BankInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityBill_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:SegmentNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:TotalDueAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:TaxAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:PastDueAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:DocumentPresentationCd" minOccurs="0"/>
+                            <xsd:element ref="blg:InvoiceGeneratedInd" minOccurs="0"/>
+                            <xsd:element ref="blg:TransExeTimestamp" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentFeeAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoBillExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityCashPosting_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:SegmentNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:CashSourceCd" minOccurs="0"/>
+                            <xsd:element ref="blg:ReceiptDt" minOccurs="0"/>
+                            <xsd:element ref="blg:TransExeTimestamp" minOccurs="0"/>
+                            <xsd:element ref="blg:FirstInstallmentInd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoCashPostingExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityInfoHistory_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:RunningBalanceAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:PostingTypeCd"/>
+                            <xsd:element ref="blg:DocumentPresentationCd" minOccurs="0"/>
+                            <xsd:element ref="blg:TransExeTimestamp" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoHistoryExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityInfoPendingPayment_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:ReferenceNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:ECheckDetails" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:CardDetails" minOccurs="0"/>
+                            <xsd:element ref="blg:FormOfPaymentCd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoPendingPaymentExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityInfoScheduledPayment_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:ReferenceNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:InputChannelCd" minOccurs="0"/>
+                            <xsd:element ref="blg:ScheduledPaymentPeriod" minOccurs="0"/>
+                            <xsd:element ref="blg:ECheckDetails" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:CardDetails" minOccurs="0"/>
+                            <xsd:element ref="blg:NameInfo" minOccurs="0"/>
+                            <xsd:element ref="blg:TransferAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:TransactionStatusCd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoScheduledPaymentExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityMemoPosting_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:SegmentNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:BackDatedCd" minOccurs="0"/>
+                            <xsd:element ref="blg:TransExeTimestamp" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoMemoPostingExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityNarrative_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:SegmentNumber"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoNarrativeExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityPremiumPosting_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingActivityInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:SegmentNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:BackDatedCd" minOccurs="0"/>
+                            <xsd:element ref="blg:TransExeTimestamp" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoPremiumPostingExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingActivityRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumberRq" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:StartDt" minOccurs="0"/>
+                    <xsd:element ref="blg:EndDt" minOccurs="0"/>
+                    <xsd:element ref="blg:NumRecords" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingHistoryRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumberRq" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:StartDt" minOccurs="0"/>
+                    <xsd:element ref="blg:EndDt" minOccurs="0"/>
+                    <xsd:element ref="blg:NumRecords" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingInfoPackagedPolicyDetail_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:ProductItem" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:SegmentNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:CoverageEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:PolicyStatusCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TerminationEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:DeactivationReasonCd" minOccurs="0"/>
+                    <xsd:element ref="blg:StateProvCd" minOccurs="0"/>
+                    <xsd:element ref="blg:LOBCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TotalDueAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:WrittenAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:PriorTermBalanceAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:ChargeOffBalanceAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:FullTermAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:TotalSurchargeAmt"/>
+                    <xsd:element ref="blg:CancelEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:ReinstateEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BillingInfoPackagedPolicyDetailExt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="PayorRef" type="xsd:IDREF"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:BillingActivityInfoBill" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoNarrative" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoPremiumPosting" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoCashPosting" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingActivityInfoMemoPosting" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:DocumentPresentationCd" minOccurs="0"/>
+                            <xsd:element ref="blg:DayMonthDue" minOccurs="0"/>
+                            <xsd:element ref="blg:MethodPaymentCd" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentFeeCount" minOccurs="0"/>
+                            <xsd:element ref="blg:TermInstallmentsCount" minOccurs="0"/>
+                            <xsd:element ref="blg:SubsequentInstallmentPct" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentsRemainingCount" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentFeeTotalAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:CollectionStatusCd" minOccurs="0"/>
+                            <xsd:element ref="blg:Policy" minOccurs="0"/>
+                            <xsd:element ref="blg:DownPaymentPct" minOccurs="0"/>
+                            <xsd:element ref="blg:NumTotalCancellationNotices" minOccurs="0"/>
+                            <xsd:element ref="blg:RangeInfo" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:NumNonSufficientFunds" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentFeePaidCount" minOccurs="0"/>
+                            <xsd:element ref="blg:InstallmentFeeAmt" minOccurs="0"/>
+                            <xsd:element ref="blg:AdditionalRecordsExistInd" minOccurs="0"/>
+                            <xsd:element ref="blg:BillingActivityInfoHistory" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingInqRs_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingInqRs_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:ThirdPartyPayor" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingInqRsExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingSummaryRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumberRq" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:TransactionEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:NumRecords" minOccurs="0"/>
+                    <xsd:element ref="blg:PendingDayMonthDue" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingTransactionHistoryRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumberRq" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:StartDt" minOccurs="0"/>
+                    <xsd:element ref="blg:EndDt" minOccurs="0"/>
+                    <xsd:element ref="blg:NumRecords" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BillingTransactionHistoryRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BillingTransactionHistoryRs_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BillingInqRs_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BillingTransactionHistoryRsExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.BusinessInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:BusinessInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:BusinessInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.CardDetails_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Token" minOccurs="0"/>
+                    <xsd:element ref="blg:TokenRefGUID" minOccurs="0"/>
+                    <xsd:element ref="blg:AccountNumberId" minOccurs="0"/>
+                    <xsd:element ref="blg:CardNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:CardTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CardBrandCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CardBrandSubCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CreditCardExpirationDt" minOccurs="0"/>
+                    <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:PurchaseCardLevel3Ind" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:CardDetailsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.CommlName_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:CommlName_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:CommlNameExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.Communications_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:Communications_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:CommunicationsExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.DURATION">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:DURATION">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:Description" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:DurationExt" minOccurs="0"/>
+                        </xsd:sequence>
+                        <xsd:attribute name="ChangeTypeCd" type="blg:ChangeTypeCd_Type"/>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.DetailAddr_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:DetailAddr_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:DetailAddrExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ECheckDetails_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:AccountNumberId" minOccurs="0"/>
+                    <xsd:element ref="blg:CheckNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:ECheckDetailsCd" minOccurs="0"/>
+                    <xsd:element ref="blg:ACHTransactionTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:BankInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:ECheckDetailsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ElectronicFundsTransfer_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:ElectronicFundsTransfer_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:ElectronicFundsTransferExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.EligibilityActivity_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:EligibilityActivityCd" minOccurs="0"/>
+                    <xsd:element ref="blg:EligibilityInd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:EligibilityActivityExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.EmailInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:EmailInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:EmailInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ExtendedStatus_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:ExtendedStatus_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:ExtendedStatusExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.Extension_Type">
+                <xsd:sequence>
+                    <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="skip" namespace="##any"/>
+                </xsd:sequence>
+                <xsd:anyAttribute processContents="lax" namespace="##any"/>
+            </xsd:complexType>
+            <xsd:complexType name="AL.FamilyName_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:FamilyName_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:FamilyNameExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.Fee_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:Fee_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:FeeExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.Form_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:Form_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:FormExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.FromAcct_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:FromAcct_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:FromAcctExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.GeneralPartyInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:GeneralPartyInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:GeneralPartyInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.Identifier_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:IdTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:Id" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.InstallmentInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:InstallmentInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:InstallmentInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.InsuredOrPrincipalInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:InsuredOrPrincipalInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:SPPPayorInd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:InsuredOrPrincipalInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.InsuredOrPrincipal_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:InsuredOrPrincipal_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:InsuredOrPrincipalExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.MiscPartyInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:MiscPartyInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:MiscPartyInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.MiscParty_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:MiscParty_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:MiscPartyExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.MsgStatus_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:MsgStatus_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:MsgSeverityLevelCd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:MsgStatusExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.NameInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:NameInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:NameInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PCPOLICY">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PCPOLICY">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:BillingInfoPackagedPolicyDetail" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:Producer" minOccurs="0"/>
+                            <xsd:element ref="blg:EndorsementDt" minOccurs="0"/>
+                            <xsd:element ref="blg:RegionalOperationsCenterCd" minOccurs="0"/>
+                            <xsd:element ref="blg:StateProvCd" minOccurs="0"/>
+                            <xsd:element ref="blg:MRPIndicatorCd" minOccurs="0"/>
+                            <xsd:element ref="blg:CompanyCd" minOccurs="0"/>
+                            <xsd:element ref="blg:RenewalCycleCd" minOccurs="0"/>
+                            <xsd:element ref="blg:TerminationEffectiveDt" minOccurs="0"/>
+                            <xsd:element ref="blg:TerminationReasonCd" minOccurs="0"/>
+                            <xsd:element ref="blg:PolicyEquityDt" minOccurs="0"/>
+                            <xsd:element ref="blg:RelatedPolicyNumber" minOccurs="0"/>
+                            <xsd:element ref="blg:AutoTermCancelInd" minOccurs="0"/>
+                            <xsd:element ref="blg:PaymentRenewalInd" minOccurs="0"/>
+                            <xsd:element ref="blg:BillScheduleCd" minOccurs="0"/>
+                            <xsd:element ref="blg:EquityBillInd" minOccurs="0"/>
+                            <xsd:element ref="blg:AcceleratedPolicyInd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PolicyExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PaymentControlInfoExt_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:CardBrandSubCd" minOccurs="0"/>
+                    <xsd:element ref="blg:PaymentControlInfoExt01" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PaymentControlInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:OrderNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:PaymentMerchantId" minOccurs="0"/>
+                    <xsd:element ref="blg:Token" minOccurs="0"/>
+                    <xsd:element ref="blg:TokenRefGUID" minOccurs="0"/>
+                    <xsd:element ref="blg:ReTokenizationCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CardBrandCd" minOccurs="0"/>
+                    <xsd:element ref="blg:PurchaseCardLevel3Ind" minOccurs="0"/>
+                    <xsd:element ref="blg:TokenStatusCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CardTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PaymentControlInfoExt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="ChangeTypeCd" type="blg:ChangeTypeCd_Type"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PaymentHistoryInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PaymentHistoryInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PaymentHistoryInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PaymentInfoByPolicyNumberRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumberRq" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PaymentInfoRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:TransactionResponseDt" minOccurs="0"/>
+                    <xsd:element ref="blg:TransactionEffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:CurCd" minOccurs="0"/>
+                    <xsd:element ref="blg:MsgStatus" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:AsOfDt" minOccurs="0"/>
+                    <xsd:element ref="blg:Policy" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PaymentInfoRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PaymentOption_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PaymentOption_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:EZPPayOptionCd" minOccurs="0"/>
+                            <xsd:element ref="blg:PaymentDiscountCd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PaymentOptionExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PayrollDeductionInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PayrollDeductionInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:MiscParty" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PayrollDeductionInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PendingPaymentSummaryRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:InputChannelCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PendingPaymentSummaryRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PendingPaymentSummaryRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatus" minOccurs="0"/>
+                    <xsd:element ref="blg:LanId" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingActivityInfoPendingPayment" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BillingActivityInfoScheduledPayment" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PendingPaymentSummaryRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PersonInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PersonInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PersonInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PersonName_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PersonName_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PersonNameExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PhoneInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:PhoneInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:PhoneInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PolicyExt_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:SeasonalPremiumInd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PolicyExt01" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.PolicyNumberRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber"/>
+                    <xsd:element ref="blg:StatStateCd" minOccurs="0"/>
+                    <xsd:element ref="blg:StartTs" minOccurs="0"/>
+                    <xsd:element ref="blg:PostingTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PolicyNumberRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ProducerInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:ProducerInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:RegionalOfficeCd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:ProducerInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.Producer_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:Producer_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:ProducerExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ProductItem_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:ItemNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:ItemDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:ProductItemExt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RangeInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:RangeInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:RangeDescription"/>
+                            <xsd:element ref="blg:UnitMeasurementCd" minOccurs="0"/>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:RangeInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RemittanceInfo_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:RemittanceInfo_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:RemittanceInfoExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrieveBillingInfoForPaymentRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:CarrierCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CarrierAdminSystem" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrieveBillingInfoForPaymentRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrieveBillingInfoForPaymentRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatus" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:RemittanceInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrieveBillingInfoForPaymentRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrieveBillingPreferencesRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:StatStateCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrieveBillingPreferencesRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrieveBillingPreferencesRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatus"/>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:MethodPaymentCd" minOccurs="0"/>
+                    <xsd:element ref="blg:EligibilityActivity" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrieveBillingPreferencesRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrievePaymentHistoryRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:InputChannelCd" minOccurs="0"/>
+                    <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:StatStateCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrievePaymentHistoryRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrievePaymentHistoryRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatus"/>
+                    <xsd:element ref="blg:BillingInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrievePaymentHistoryRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrievePolicyStatusRq_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:LossDt" minOccurs="0"/>
+                    <xsd:element ref="blg:StatStateCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrievePolicyStatusRqExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.RetrievePolicyStatusRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatus" minOccurs="0"/>
+                    <xsd:element ref="blg:PolicyStatusCd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:RetrievePolicyStatusRsExt" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="AL.TaxIdentity_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:TaxIdentity_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:TaxIdentityExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ThirdPartyPayor_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:GeneralPartyInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:LoanNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:BalanceInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:BOMTCd" minOccurs="0"/>
+                    <xsd:element ref="blg:SPPPayorInd" minOccurs="0"/>
+                    <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:ThirdPartyPayorExt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="AL.ToAcct_Type">
+                <xsd:complexContent>
+                    <xsd:extension base="blg:ToAcct_Type">
+                        <xsd:sequence>
+                            <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                            <xsd:element ref="blg:ToAcctExt" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="Addr_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:AddrTypeCd" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:Addr1" minOccurs="0"/>
+                    <xsd:element ref="blg:DetailAddr" minOccurs="0"/>
+                    <xsd:element ref="blg:Addr2" minOccurs="0"/>
+                    <xsd:element ref="blg:Addr3" minOccurs="0"/>
+                    <xsd:element ref="blg:Addr4" minOccurs="0"/>
+                    <xsd:element ref="blg:City" minOccurs="0"/>
+                    <xsd:element ref="blg:StateProvCd" minOccurs="0"/>
+                    <xsd:element ref="blg:StateProv" minOccurs="0"/>
+                    <xsd:element ref="blg:PostalCode" minOccurs="0"/>
+                    <xsd:element ref="blg:CountryCd" minOccurs="0"/>
+                    <xsd:element ref="blg:Country" minOccurs="0"/>
+                    <xsd:element ref="blg:County" minOccurs="0"/>
+                    <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="PreferredContactRef" type="xsd:IDREF"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="BalanceInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:NextBillAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:MinimumDueDt" minOccurs="0"/>
+                    <xsd:element ref="blg:NumPayments" minOccurs="0"/>
+                    <xsd:element ref="blg:NextBillIssueDt" minOccurs="0"/>
+                    <xsd:element ref="blg:NextBillDueDt" minOccurs="0"/>
+                    <xsd:element ref="blg:LastPaymentAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:LastPaymentDt" minOccurs="0"/>
+                    <xsd:element ref="blg:PreviousBilledAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:MinimumDueAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:MethodPaymentCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TotalDueAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:DayMonthDue" minOccurs="0"/>
+                    <xsd:element ref="blg:PaymentPlanCd" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="BankInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:BankId"/>
+                    <xsd:element ref="blg:BranchId" minOccurs="0"/>
+                    <xsd:element ref="blg:MiscParty" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="BillingActivityInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:BillingActivityCd" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingActivityDt" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingActivityAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:MinimumDueAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingActivityId" minOccurs="0"/>
+                    <xsd:element ref="blg:DueDt" minOccurs="0"/>
+                    <xsd:element ref="blg:MethodPaymentCd" minOccurs="0"/>
+                    <xsd:element ref="blg:ActivityDesc" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="PayorRef" type="xsd:IDREF"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="BillingInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:InsuredOrPrincipal" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingAccountNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:PolicyNumber"/>
+                    <xsd:element ref="blg:BillingPeriod" minOccurs="0"/>
+                    <xsd:element ref="blg:BalanceInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingAccountStatusCd" minOccurs="0"/>
+                    <xsd:element ref="blg:PendingCancelDt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="BillingInqRs_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatus" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BillingInfo" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="BusinessInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:SICCd" minOccurs="0"/>
+                    <xsd:element ref="blg:NAICSCd" minOccurs="0"/>
+                    <xsd:element ref="blg:NatureBusinessCd" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="CURRENCY">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Amt"/>
+                    <xsd:element ref="blg:CurCd" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="ChangeTypeCd_Type">
+                <xsd:restriction base="xsd:token">
+                    <xsd:enumeration value="Changed"/>
+                    <xsd:enumeration value="Deleted"/>
+                    <xsd:enumeration value="New"/>
+                    <xsd:enumeration value="NoChange"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:complexType name="CommlName_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:CommercialName"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="Communications_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PhoneInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:EmailInfo" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="DURATION">
+                <xsd:sequence>
+                    <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:ExpirationDt" minOccurs="0"/>
+                    <xsd:element ref="blg:ContinuousInd" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="Date">
+                <xsd:union memberTypes="xsd:date xsd:gYear xsd:gYearMonth xsd:dateTime"/>
+            </xsd:simpleType>
+            <xsd:complexType name="DetailAddr_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PreDirectionCd" minOccurs="0"/>
+                    <xsd:element ref="blg:StreetName" minOccurs="0"/>
+                    <xsd:element ref="blg:StreetTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:PostDirectionCd" minOccurs="0"/>
+                    <xsd:element ref="blg:StreetNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:UnitNumber" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="ElectronicFundsTransfer_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:FromAcct" minOccurs="0"/>
+                    <xsd:element ref="blg:ToAcct" minOccurs="0"/>
+                    <xsd:element ref="blg:TransferAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:Fee" minOccurs="0"/>
+                    <xsd:element ref="blg:EFTFrequencyCd" minOccurs="0"/>
+                    <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                    <xsd:element ref="blg:EFTTrackingId" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="EmailInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:CommunicationUseCd" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:EmailAddr"/>
+                    <xsd:element ref="blg:DoNotContactInd" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="PreferredContactRef" type="xsd:IDREF"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="ExtendedStatus_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:ExtendedStatusCd"/>
+                    <xsd:element ref="blg:ExtendedStatusDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:MissingElementPath" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="IdRefs" type="xsd:IDREFS"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="FamilyName_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:TitlePrefix" minOccurs="0"/>
+                    <xsd:element ref="blg:FamilyNames"/>
+                    <xsd:element ref="blg:Surname"/>
+                    <xsd:element ref="blg:NameSuffix" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="Fee_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:FeeDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:FeeAmt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="Form_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:FormNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:FormName" minOccurs="0"/>
+                    <xsd:element ref="blg:CopyrightOwnerCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CopyrightOwnerNameCd" minOccurs="0"/>
+                    <xsd:element ref="blg:FormDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:EditionDt" minOccurs="0"/>
+                    <xsd:element ref="blg:FormDataArea" minOccurs="0"/>
+                    <xsd:element ref="blg:IterationNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:FormSequencingNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:BondFormOwner" minOccurs="0"/>
+                    <xsd:element ref="blg:BondFormNumberOwner" minOccurs="0"/>
+                    <xsd:element ref="blg:WebsiteURL" minOccurs="0"/>
+                    <xsd:element ref="blg:FormTextContent" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="FromAcct_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:AccountNumberId"/>
+                    <xsd:element ref="blg:AcctTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CreditCardExpirationDt" minOccurs="0"/>
+                    <xsd:element ref="blg:BankInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:CheckNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:PayrollDeductionInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:CommercialName" minOccurs="0"/>
+                    <xsd:element ref="blg:SecurityId" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="GeneralPartyInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:NameInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:Addr" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:Communications" minOccurs="0"/>
+                    <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="InstallmentInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:InstallmentAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:InstallmentFeeAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:InstallmentNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:InstallmentDueDt" minOccurs="0"/>
+                    <xsd:element ref="blg:FirstInstallmentPct" minOccurs="0"/>
+                    <xsd:element ref="blg:TaxAmt" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="InsuredOrPrincipalInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:InsuredOrPrincipalRoleCd" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:InsuredOrPrincipalRoleDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:PersonInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:BusinessInfo" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="InsuredOrPrincipal_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:GeneralPartyInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:InsuredOrPrincipalInfo" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="KeyedValue_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:KeyName"/>
+                    <xsd:element ref="blg:KeyValue" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="MEASUREMENT">
+                <xsd:sequence>
+                    <xsd:element ref="blg:NumUnits"/>
+                    <xsd:element ref="blg:UnitMeasurementCd" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="MiscPartyInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MiscPartyRoleCd" minOccurs="0"/>
+                    <xsd:element ref="blg:MiscPartySubRoleCd" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="MiscParty_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:GeneralPartyInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:MiscPartyInfo" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="MsgStatus_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:MsgStatusCd"/>
+                    <xsd:element ref="blg:MsgErrorCd" minOccurs="0"/>
+                    <xsd:element ref="blg:MsgStatusDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:ExtendedStatus" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="NameInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:CommlName" minOccurs="0"/>
+                    <xsd:element ref="blg:FamilyName" minOccurs="0"/>
+                    <xsd:element ref="blg:PersonName" minOccurs="0"/>
+                    <xsd:element ref="blg:LegalEntityCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TaxIdentity" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="AffiliationRefs" type="xsd:IDREFS"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="OpenEnum">
+                <xsd:simpleContent>
+                    <xsd:extension base="xsd:token">
+                        <xsd:attribute name="CodeListName" type="xsd:string"/>
+                        <xsd:attribute name="CodeListOwnerCd" type="xsd:token"/>
+                        <xsd:attribute name="Description" type="xsd:string"/>
+                    </xsd:extension>
+                </xsd:simpleContent>
+            </xsd:complexType>
+            <xsd:complexType name="PCPOLICY">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PolicyNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:CompanyProductCd" minOccurs="0"/>
+                    <xsd:element ref="blg:BroadLOBCd" minOccurs="0"/>
+                    <xsd:element ref="blg:LOBCd" minOccurs="0"/>
+                    <xsd:element ref="blg:LOBSubCd" minOccurs="0"/>
+                    <xsd:element ref="blg:NAICCd" minOccurs="0"/>
+                    <xsd:element ref="blg:ControllingStateProvCd" minOccurs="0"/>
+                    <xsd:element ref="blg:ContractTerm" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingAccountNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:BillingMethodCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CurrentTermAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:WrittenAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:GroupId" minOccurs="0"/>
+                    <xsd:element ref="blg:PayorCd" minOccurs="0"/>
+                    <xsd:element ref="blg:PaymentOption" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:AccountNumberId" minOccurs="0"/>
+                    <xsd:element ref="blg:MiscParty" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PolicyStatusCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TermProcessDt" minOccurs="0"/>
+                    <xsd:element ref="blg:OriginalPolicyInceptionDt" minOccurs="0"/>
+                    <xsd:element ref="blg:PaidInFullInd" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="PaymentHistoryInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:GoodPaymentHistoryInd" minOccurs="0"/>
+                    <xsd:element ref="blg:NumLatePayments" minOccurs="0"/>
+                    <xsd:element ref="blg:NumCancRein" minOccurs="0"/>
+                    <xsd:element ref="blg:DurationPeriod" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="PaymentOption_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PaymentPlanCd" minOccurs="0"/>
+                    <xsd:element ref="blg:DayMonthDue" minOccurs="0"/>
+                    <xsd:element ref="blg:CollectedByAgentAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:MethodPaymentCd" minOccurs="0"/>
+                    <xsd:element ref="blg:DepositAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:InstallmentFeeAmt" minOccurs="0"/>
+                    <xsd:element ref="blg:InstallmentPct" minOccurs="0"/>
+                    <xsd:element ref="blg:InstallmentInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:FirstPaymentDueDt" minOccurs="0"/>
+                    <xsd:element ref="blg:PaymentIntervalCd" minOccurs="0"/>
+                    <xsd:element ref="blg:NumPayments" minOccurs="0"/>
+                    <xsd:element ref="blg:Description" minOccurs="0"/>
+                    <xsd:element ref="blg:CheckNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:CheckDt" minOccurs="0"/>
+                    <xsd:element ref="blg:ElectronicFundsTransfer" minOccurs="0"/>
+                    <xsd:element ref="blg:LOBCd" minOccurs="0"/>
+                    <xsd:element ref="blg:LOBSubCd" minOccurs="0"/>
+                    <xsd:element ref="blg:DepositMethodPaymentCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TaxExemptStateProvCd" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:BillingPeriod" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="PayrollDeductionInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:NameInfo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:EmployerId" minOccurs="0"/>
+                    <xsd:element ref="blg:EmployeeId" minOccurs="0"/>
+                    <xsd:element ref="blg:EmployeeInterestCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CommercialName" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="PersonInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:GenderCd" minOccurs="0"/>
+                    <xsd:element ref="blg:BirthDt" minOccurs="0"/>
+                    <xsd:element ref="blg:MaritalStatusCd" minOccurs="0"/>
+                    <xsd:element ref="blg:OccupationDesc" minOccurs="0"/>
+                    <xsd:element ref="blg:MiscParty" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="PersonName_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Surname" minOccurs="0"/>
+                    <xsd:element ref="blg:GivenName" minOccurs="0"/>
+                    <xsd:element ref="blg:OtherGivenName" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:TitlePrefix" minOccurs="0"/>
+                    <xsd:element ref="blg:NameSuffix" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="PhoneInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:PhoneTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CommunicationUseCd" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:PhoneNumber"/>
+                    <xsd:element ref="blg:DoNotContactInd" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="PreferredContactRef" type="xsd:IDREF"/>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="ProducerInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:ContractNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:ProducerSubCode" minOccurs="0"/>
+                    <xsd:element ref="blg:ProducerRoleCd" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="Producer_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:GeneralPartyInfo" minOccurs="0"/>
+                    <xsd:element ref="blg:ProducerInfo" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="RangeInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:RangeStart" minOccurs="0"/>
+                    <xsd:element ref="blg:RangeEnd" minOccurs="0"/>
+                    <xsd:element ref="blg:RangeTotalNum" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="RemittanceInfo_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:OrderNumber" minOccurs="0"/>
+                    <xsd:element ref="blg:ApplicationNameCd" minOccurs="0"/>
+                    <xsd:element ref="blg:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+                    <xsd:element ref="blg:AtlasGroupCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CedeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CedeDescriptionCd" minOccurs="0"/>
+                    <xsd:element ref="blg:EditByPassCd" minOccurs="0"/>
+                    <xsd:element ref="blg:EZPayInd" minOccurs="0"/>
+                    <xsd:element ref="blg:DoNotAcceptInd" minOccurs="0"/>
+                    <xsd:element ref="blg:MultipleRecordPolicyCd" minOccurs="0"/>
+                    <xsd:element ref="blg:RateControl" minOccurs="0"/>
+                    <xsd:element ref="blg:RegionalOfficeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:TaxDt" minOccurs="0"/>
+                    <xsd:element ref="blg:SourceSystemCd" minOccurs="0"/>
+                    <xsd:element ref="blg:UnderwritingReferralCd" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="TaxIdentity_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:TaxIdTypeCd"/>
+                    <xsd:element ref="blg:TaxId"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:complexType name="ToAcct_Type">
+                <xsd:sequence>
+                    <xsd:element ref="blg:AccountNumberId"/>
+                    <xsd:element ref="blg:AcctTypeCd" minOccurs="0"/>
+                    <xsd:element ref="blg:CreditCardExpirationDt" minOccurs="0"/>
+                    <xsd:element ref="blg:BankInfo"/>
+                    <xsd:element ref="blg:CommercialName" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="id" type="xsd:ID"/>
+            </xsd:complexType>
+            <xsd:element name="ACHTransactionTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="AcceleratedPolicyInd" type="xsd:boolean"/>
+            <xsd:element name="AccountNumberId" type="xsd:string"/>
+            <xsd:element name="AccountingCompanyCd" type="blg:OpenEnum"/>
+            <xsd:element name="AcctTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="ActivityDesc" type="xsd:string"/>
+            <xsd:element name="AdditionalRecordsExistInd" type="xsd:boolean"/>
+            <xsd:element name="Addr" type="blg:AL.Addr_Type"/>
+            <xsd:element name="Addr1" type="xsd:string"/>
+            <xsd:element name="Addr2" type="xsd:string"/>
+            <xsd:element name="Addr3" type="xsd:string"/>
+            <xsd:element name="Addr4" type="xsd:string"/>
+            <xsd:element name="AddrExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="AddrTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="Amt" type="xsd:decimal"/>
+            <xsd:element name="AnnualizedAdjustedPremiumInfo" type="blg:AL.AnnualizedAdjustedPremiumInfo_Type"/>
+            <xsd:element name="AnnualizedAdjustedPremiumInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="ApplicationNameCd" type="blg:OpenEnum"/>
+            <xsd:element name="AsOfDt" type="xsd:date"/>
+            <xsd:element name="AtlasGroupCd" type="blg:OpenEnum"/>
+            <xsd:element name="AuthorizationCode" type="xsd:string"/>
+            <xsd:element name="AutoTermCancelInd" type="xsd:boolean"/>
+            <xsd:element name="BOMTCd" type="blg:OpenEnum"/>
+            <xsd:element name="BackDatedCd" type="blg:OpenEnum"/>
+            <xsd:element name="BalanceInfo" type="blg:AL.BalanceInfo_Type"/>
+            <xsd:element name="BalanceInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BankId" type="xsd:string"/>
+            <xsd:element name="BankInfo" type="blg:AL.BankInfo_Type"/>
+            <xsd:element name="BankInfoByABANumberRq" type="blg:AL.BankInfoByABANumberRq_Type"/>
+            <xsd:element name="BankInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BankInfoRs" type="blg:AL.BankInfoRs_Type"/>
+            <xsd:element name="BankInfoRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillScheduleCd" type="blg:OpenEnum"/>
+            <xsd:element name="BillingAccountNumber" type="xsd:string"/>
+            <xsd:element name="BillingAccountStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="BillingActivityAmt" type="blg:CURRENCY"/>
+            <xsd:element name="BillingActivityCd" type="blg:OpenEnum"/>
+            <xsd:element name="BillingActivityDt" type="xsd:date"/>
+            <xsd:element name="BillingActivityId" type="xsd:string"/>
+            <xsd:element name="BillingActivityInfoBill" type="blg:AL.BillingActivityBill_Type"/>
+            <xsd:element name="BillingActivityInfoBillExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoBillExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoBillExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoBillExt02" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoCashPosting" type="blg:AL.BillingActivityCashPosting_Type"/>
+            <xsd:element name="BillingActivityInfoCashPostingExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoCashPostingExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoCashPostingExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PendingPaymentInd" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoCashPostingExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoCashPostingExt02" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoHistory" type="blg:AL.BillingActivityInfoHistory_Type"/>
+            <xsd:element name="BillingActivityInfoHistoryExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoMemoPosting" type="blg:AL.BillingActivityMemoPosting_Type"/>
+            <xsd:element name="BillingActivityInfoMemoPostingExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoMemoPostingExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoMemoPostingExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoNarrative" type="blg:AL.BillingActivityNarrative_Type"/>
+            <xsd:element name="BillingActivityInfoNarrativeExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:Identifier" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoNarrativeExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoNarrativeExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoNarrativeExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoNarrativeExt02" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoPendingPayment" type="blg:AL.BillingActivityInfoPendingPayment_Type"/>
+            <xsd:element name="BillingActivityInfoPendingPaymentExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoPremiumPosting" type="blg:AL.BillingActivityPremiumPosting_Type"/>
+            <xsd:element name="BillingActivityInfoPremiumPostingExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:EffectiveDt" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoPremiumPostingExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoPremiumPostingExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoPremiumPostingExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoPremiumPostingExt02" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityInfoScheduledPayment" type="blg:AL.BillingActivityInfoScheduledPayment_Type"/>
+            <xsd:element name="BillingActivityInfoScheduledPaymentExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PaymentStatusCd" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingActivityInfoScheduledPaymentExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingActivityInfoScheduledPaymentExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingActivityRq" type="blg:AL.BillingActivityRq_Type"/>
+            <xsd:element name="BillingActivityRs" type="blg:AL.BillingInqRs_Type"/>
+            <xsd:element name="BillingHistoryRq" type="blg:AL.BillingHistoryRq_Type"/>
+            <xsd:element name="BillingHistoryRs" type="blg:AL.BillingInqRs_Type"/>
+            <xsd:element name="BillingInfo" type="blg:AL.BillingInfo_Type"/>
+            <xsd:element name="BillingInfoExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:BillingActivityInfoScheduledPayment" minOccurs="0"/>
+                        <xsd:element ref="blg:EligibilityActivity" minOccurs="0"/>
+                        <xsd:element ref="blg:KeyedValue" minOccurs="0" maxOccurs="unbounded"/>
+                        <xsd:element ref="blg:BillingInfoExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingInfoExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PendingDayMonthDue" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingInfoExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingInfoExt02">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:AnnualizedAdjustedPremiumInfo" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingInfoExt03" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingInfoExt03" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingInfoPackagedPolicyDetail" type="blg:AL.BillingInfoPackagedPolicyDetail_Type"/>
+            <xsd:element name="BillingInfoPackagedPolicyDetailExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingInfoPackagedPolicyDetailExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="BillingInfoPackagedPolicyDetailExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingInqRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingMethodCd" type="blg:OpenEnum"/>
+            <xsd:element name="BillingOptionCd" type="blg:OpenEnum"/>
+            <xsd:element name="BillingPayorStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="BillingPeriod" type="blg:DURATION"/>
+            <xsd:element name="BillingSummaryByPolicyNumberRq" type="blg:AL.BillingSummaryRq_Type"/>
+            <xsd:element name="BillingSummaryRs" type="blg:AL.BillingInqRs_Type"/>
+            <xsd:element name="BillingTransactionHistoryRq" type="blg:AL.BillingTransactionHistoryRq_Type"/>
+            <xsd:element name="BillingTransactionHistoryRqExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BillingTransactionHistoryRs" type="blg:AL.BillingTransactionHistoryRs_Type"/>
+            <xsd:element name="BillingTransactionHistoryRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BirthDt" type="xsd:date"/>
+            <xsd:element name="BondFormNumberOwner" type="xsd:string"/>
+            <xsd:element name="BondFormOwner" type="xsd:string"/>
+            <xsd:element name="BranchId" type="xsd:string"/>
+            <xsd:element name="BroadLOBCd" type="blg:OpenEnum"/>
+            <xsd:element name="BusinessInfo" type="blg:AL.BusinessInfo_Type"/>
+            <xsd:element name="BusinessInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="BusinessProcessChannelCd" type="blg:OpenEnum"/>
+            <xsd:element name="CancelEffectiveDt" type="xsd:date"/>
+            <xsd:element name="CardBrandCd" type="blg:OpenEnum"/>
+            <xsd:element name="CardBrandSubCd" type="blg:OpenEnum"/>
+            <xsd:element name="CardDetails" type="blg:AL.CardDetails_Type"/>
+            <xsd:element name="CardDetailsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="CardNumber" type="xsd:string"/>
+            <xsd:element name="CardTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="CarrierAdminSubSystemCd" type="blg:OpenEnum"/>
+            <xsd:element name="CarrierAdminSystem" type="xsd:string"/>
+            <xsd:element name="CarrierCd" type="blg:OpenEnum"/>
+            <xsd:element name="CashSourceCd" type="blg:OpenEnum"/>
+            <xsd:element name="CedeCd" type="blg:OpenEnum"/>
+            <xsd:element name="CedeDescriptionCd" type="blg:OpenEnum"/>
+            <xsd:element name="ChargeOffBalanceAmt" type="blg:CURRENCY"/>
+            <xsd:element name="CheckDt" type="xsd:date"/>
+            <xsd:element name="CheckNumber" type="xsd:string"/>
+            <xsd:element name="City" type="xsd:string"/>
+            <xsd:element name="CollectedByAgentAmt" type="blg:CURRENCY"/>
+            <xsd:element name="CollectionStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="CommercialName" type="xsd:string"/>
+            <xsd:element name="CommlName" type="blg:AL.CommlName_Type"/>
+            <xsd:element name="CommlNameExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="CommunicationUseCd" type="blg:OpenEnum"/>
+            <xsd:element name="Communications" type="blg:AL.Communications_Type"/>
+            <xsd:element name="CommunicationsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="CompanyCd" type="blg:OpenEnum"/>
+            <xsd:element name="CompanyProductCd" type="blg:OpenEnum"/>
+            <xsd:element name="ContinuousInd" type="xsd:boolean"/>
+            <xsd:element name="ContractNumber" type="xsd:string"/>
+            <xsd:element name="ContractTerm" type="blg:AL.DURATION"/>
+            <xsd:element name="ControllingStateProvCd" type="blg:OpenEnum"/>
+            <xsd:element name="CopyrightOwnerCd" type="blg:OpenEnum"/>
+            <xsd:element name="CopyrightOwnerNameCd" type="blg:OpenEnum"/>
+            <xsd:element name="Country" type="xsd:string"/>
+            <xsd:element name="CountryCd" type="blg:OpenEnum"/>
+            <xsd:element name="County" type="xsd:string"/>
+            <xsd:element name="CoverageEffectiveDt" type="xsd:dateTime"/>
+            <xsd:element name="CreditCardExpirationDt" type="xsd:date"/>
+            <xsd:element name="CurCd" type="blg:OpenEnum"/>
+            <xsd:element name="CurrentDueAmt" type="blg:CURRENCY"/>
+            <xsd:element name="CurrentTermAmt" type="blg:CURRENCY"/>
+            <xsd:element name="DayMonthDue" type="xsd:long"/>
+            <xsd:element name="DeactivationReasonCd" type="blg:OpenEnum"/>
+            <xsd:element name="DepositAmt" type="blg:CURRENCY"/>
+            <xsd:element name="DepositMethodPaymentCd" type="blg:OpenEnum"/>
+            <xsd:element name="Description" type="xsd:string"/>
+            <xsd:element name="DetailAddr" type="blg:AL.DetailAddr_Type"/>
+            <xsd:element name="DetailAddrExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="DoNotAcceptInd" type="xsd:boolean"/>
+            <xsd:element name="DoNotContactInd" type="xsd:boolean"/>
+            <xsd:element name="DocumentPresentationCd" type="blg:OpenEnum"/>
+            <xsd:element name="DownPaymentPct" type="xsd:decimal"/>
+            <xsd:element name="DueDt" type="xsd:date"/>
+            <xsd:element name="DurationExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="DurationPeriod" type="blg:MEASUREMENT"/>
+            <xsd:element name="EBillEnrollmentDt" type="blg:Date"/>
+            <xsd:element name="ECheckDetails" type="blg:AL.ECheckDetails_Type"/>
+            <xsd:element name="ECheckDetailsCd" type="blg:OpenEnum"/>
+            <xsd:element name="ECheckDetailsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="EFTFrequencyCd" type="blg:OpenEnum"/>
+            <xsd:element name="EFTTrackingId" type="xsd:string"/>
+            <xsd:element name="EZPPayOptionCd" type="blg:OpenEnum"/>
+            <xsd:element name="EZPayInd" type="xsd:boolean"/>
+            <xsd:element name="EditByPassCd" type="blg:OpenEnum"/>
+            <xsd:element name="EditionDt" type="xsd:date"/>
+            <xsd:element name="EffectiveDt" type="blg:Date"/>
+            <xsd:element name="ElectronicFundsTransfer" type="blg:AL.ElectronicFundsTransfer_Type"/>
+            <xsd:element name="ElectronicFundsTransferExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="EligibilityActivity" type="blg:AL.EligibilityActivity_Type"/>
+            <xsd:element name="EligibilityActivityCd" type="blg:OpenEnum"/>
+            <xsd:element name="EligibilityActivityExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="EligibilityInd" type="xsd:boolean"/>
+            <xsd:element name="EmailAddr" type="xsd:token"/>
+            <xsd:element name="EmailInfo" type="blg:AL.EmailInfo_Type"/>
+            <xsd:element name="EmailInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="EmployeeId" type="xsd:string"/>
+            <xsd:element name="EmployeeInterestCd" type="blg:OpenEnum"/>
+            <xsd:element name="EmployerId" type="xsd:string"/>
+            <xsd:element name="EndDt" type="xsd:date"/>
+            <xsd:element name="EndorsementDt" type="xsd:date"/>
+            <xsd:element name="EquityBillInd" type="xsd:boolean"/>
+            <xsd:element name="ExpirationDt" type="blg:Date"/>
+            <xsd:element name="ExtendedStatus" type="blg:AL.ExtendedStatus_Type"/>
+            <xsd:element name="ExtendedStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="ExtendedStatusDesc" type="xsd:string"/>
+            <xsd:element name="ExtendedStatusExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="FamilyName" type="blg:AL.FamilyName_Type"/>
+            <xsd:element name="FamilyNameExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="FamilyNames" type="xsd:string"/>
+            <xsd:element name="Fee" type="blg:AL.Fee_Type"/>
+            <xsd:element name="FeeAmt" type="blg:CURRENCY"/>
+            <xsd:element name="FeeDesc" type="xsd:string"/>
+            <xsd:element name="FeeExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="FirstInstallmentInd" type="xsd:boolean"/>
+            <xsd:element name="FirstInstallmentPct" type="xsd:decimal"/>
+            <xsd:element name="FirstPaymentDueDt" type="xsd:date"/>
+            <xsd:element name="Form" type="blg:AL.Form_Type"/>
+            <xsd:element name="FormDataArea" type="xsd:string"/>
+            <xsd:element name="FormDesc" type="xsd:string"/>
+            <xsd:element name="FormExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="FormName" type="xsd:string"/>
+            <xsd:element name="FormNumber" type="xsd:string"/>
+            <xsd:element name="FormOfPaymentCd" type="blg:OpenEnum"/>
+            <xsd:element name="FormSequencingNumber" type="xsd:string"/>
+            <xsd:element name="FormTextContent" type="xsd:string"/>
+            <xsd:element name="FromAcct" type="blg:AL.FromAcct_Type"/>
+            <xsd:element name="FromAcctExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="FullPayAAPAmt" type="blg:CURRENCY"/>
+            <xsd:element name="FullPayAAPBalanceAmt" type="blg:CURRENCY"/>
+            <xsd:element name="FullPayAAPDiscountAmt" type="blg:CURRENCY"/>
+            <xsd:element name="FullPayAAPEligibilityDiscountCd" type="blg:OpenEnum"/>
+            <xsd:element name="FullTermAmt" type="blg:CURRENCY"/>
+            <xsd:element name="GenderCd" type="blg:OpenEnum"/>
+            <xsd:element name="GeneralPartyInfo" type="blg:AL.GeneralPartyInfo_Type"/>
+            <xsd:element name="GeneralPartyInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="GivenName" type="xsd:string"/>
+            <xsd:element name="GoodPaymentHistoryInd" type="xsd:boolean"/>
+            <xsd:element name="GroupId" type="xsd:string"/>
+            <xsd:element name="Id" type="xsd:string"/>
+            <xsd:element name="IdTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="Identifier" type="blg:AL.Identifier_Type"/>
+            <xsd:element name="InputChannelCd" type="blg:OpenEnum"/>
+            <xsd:element name="InstallmentAmt" type="blg:CURRENCY"/>
+            <xsd:element name="InstallmentDueDt" type="xsd:date"/>
+            <xsd:element name="InstallmentFeeAmt" type="blg:CURRENCY"/>
+            <xsd:element name="InstallmentFeeCount" type="xsd:integer"/>
+            <xsd:element name="InstallmentFeePaidCount" type="xsd:integer"/>
+            <xsd:element name="InstallmentFeeTotalAmt" type="blg:CURRENCY"/>
+            <xsd:element name="InstallmentInfo" type="blg:AL.InstallmentInfo_Type"/>
+            <xsd:element name="InstallmentInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="InstallmentNumber" type="xsd:long"/>
+            <xsd:element name="InstallmentPct" type="xsd:decimal"/>
+            <xsd:element name="InstallmentsRemainingCount" type="xsd:integer"/>
+            <xsd:element name="InsuredOrPrincipal" type="blg:AL.InsuredOrPrincipal_Type"/>
+            <xsd:element name="InsuredOrPrincipalExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="InsuredOrPrincipalInfo" type="blg:AL.InsuredOrPrincipalInfo_Type"/>
+            <xsd:element name="InsuredOrPrincipalInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="InsuredOrPrincipalRoleCd" type="blg:OpenEnum"/>
+            <xsd:element name="InsuredOrPrincipalRoleDesc" type="xsd:string"/>
+            <xsd:element name="InvoiceGeneratedInd" type="xsd:boolean"/>
+            <xsd:element name="ItemDesc" type="xsd:string"/>
+            <xsd:element name="ItemNumber" type="xsd:string"/>
+            <xsd:element name="IterationNumber" type="xsd:long"/>
+            <xsd:element name="KeyName" type="xsd:string"/>
+            <xsd:element name="KeyValue" type="xsd:string"/>
+            <xsd:element name="KeyedValue" type="blg:KeyedValue_Type"/>
+            <xsd:element name="LOBCd" type="blg:OpenEnum"/>
+            <xsd:element name="LOBSubCd" type="blg:OpenEnum"/>
+            <xsd:element name="LanId" type="xsd:string"/>
+            <xsd:element name="LastBillDueDt" type="xsd:date"/>
+            <xsd:element name="LastBillIssueDt" type="xsd:date"/>
+            <xsd:element name="LastBillMinimumDueAmt" type="blg:CURRENCY"/>
+            <xsd:element name="LastBillPayInFullAmt" type="blg:CURRENCY"/>
+            <xsd:element name="LastBillTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="LastPaymentAmt" type="blg:CURRENCY"/>
+            <xsd:element name="LastPaymentDt" type="xsd:date"/>
+            <xsd:element name="LegalEntityCd" type="blg:OpenEnum"/>
+            <xsd:element name="ListBillingOutputDescCd" type="blg:OpenEnum"/>
+            <xsd:element name="LoanNumber" type="xsd:string"/>
+            <xsd:element name="LossDt" type="xsd:date"/>
+            <xsd:element name="MRPIndicatorCd" type="blg:OpenEnum"/>
+            <xsd:element name="MaritalStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="MethodPaymentCd" type="blg:OpenEnum"/>
+            <xsd:element name="MinimumDueAmt" type="blg:CURRENCY"/>
+            <xsd:element name="MinimumDueDt" type="xsd:date"/>
+            <xsd:element name="MiscParty" type="blg:AL.MiscParty_Type"/>
+            <xsd:element name="MiscPartyExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="MiscPartyInfo" type="blg:AL.MiscPartyInfo_Type"/>
+            <xsd:element name="MiscPartyInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="MiscPartyRoleCd" type="blg:OpenEnum"/>
+            <xsd:element name="MiscPartySubRoleCd" type="blg:OpenEnum"/>
+            <xsd:element name="MissingElementPath" type="xsd:string"/>
+            <xsd:element name="MsgErrorCd" type="blg:OpenEnum"/>
+            <xsd:element name="MsgSeverityLevelCd" type="blg:OpenEnum"/>
+            <xsd:element name="MsgStatus" type="blg:AL.MsgStatus_Type"/>
+            <xsd:element name="MsgStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="MsgStatusDesc" type="xsd:string"/>
+            <xsd:element name="MsgStatusExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="MultipleRecordPolicyCd" type="blg:OpenEnum"/>
+            <xsd:element name="NAICCd" type="blg:OpenEnum"/>
+            <xsd:element name="NAICSCd" type="blg:OpenEnum"/>
+            <xsd:element name="NSAInd" type="xsd:boolean"/>
+            <xsd:element name="NameInfo" type="blg:AL.NameInfo_Type"/>
+            <xsd:element name="NameInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="NameSuffix" type="xsd:string"/>
+            <xsd:element name="NatureBusinessCd" type="blg:OpenEnum"/>
+            <xsd:element name="NextActivityCd" type="blg:OpenEnum"/>
+            <xsd:element name="NextActivityDt" type="xsd:date"/>
+            <xsd:element name="NextBillAmt" type="blg:CURRENCY"/>
+            <xsd:element name="NextBillDueDt" type="xsd:date"/>
+            <xsd:element name="NextBillIssueDt" type="xsd:date"/>
+            <xsd:element name="NextBillTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="NumCancRein" type="xsd:long"/>
+            <xsd:element name="NumLatePayments" type="xsd:long"/>
+            <xsd:element name="NumNonSufficientFunds" type="xsd:integer"/>
+            <xsd:element name="NumPayments" type="xsd:long"/>
+            <xsd:element name="NumRecords" type="xsd:integer"/>
+            <xsd:element name="NumTotalCancellationNotices" type="xsd:integer"/>
+            <xsd:element name="NumUnits" type="xsd:decimal"/>
+            <xsd:element name="OccupationDesc" type="xsd:string"/>
+            <xsd:element name="OrderNumber" type="xsd:string"/>
+            <xsd:element name="OriginalPolicyInceptionDt" type="blg:Date"/>
+            <xsd:element name="OtherGivenName" type="xsd:string"/>
+            <xsd:element name="PaidInFullInd" type="xsd:boolean"/>
+            <xsd:element name="PastDueAmt" type="blg:CURRENCY"/>
+            <xsd:element name="PastDueDt" type="xsd:date"/>
+            <xsd:element name="PayInFullBalanceAmt" type="blg:CURRENCY"/>
+            <xsd:element name="PaymentControlInfo" type="blg:AL.PaymentControlInfo_Type"/>
+            <xsd:element name="PaymentControlInfoExt" type="blg:AL.PaymentControlInfoExt_Type"/>
+            <xsd:element name="PaymentControlInfoExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PaymentDiscountCd" type="blg:OpenEnum"/>
+            <xsd:element name="PaymentHistoryInfo" type="blg:AL.PaymentHistoryInfo_Type"/>
+            <xsd:element name="PaymentHistoryInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PaymentInfoByPolicyNumberRq" type="blg:AL.PaymentInfoByPolicyNumberRq_Type"/>
+            <xsd:element name="PaymentInfoRs" type="blg:AL.PaymentInfoRs_Type"/>
+            <xsd:element name="PaymentInfoRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PaymentIntervalCd" type="blg:OpenEnum"/>
+            <xsd:element name="PaymentMerchantId" type="xsd:string"/>
+            <xsd:element name="PaymentOption" type="blg:AL.PaymentOption_Type"/>
+            <xsd:element name="PaymentOptionExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:BillingOptionCd" minOccurs="0"/>
+                        <xsd:element ref="blg:PaymentOptionExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PaymentOptionExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PaymentControlInfo" minOccurs="0"/>
+                        <xsd:element ref="blg:PaymentOptionExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PaymentOptionExt02" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PaymentPlanCd" type="blg:OpenEnum"/>
+            <xsd:element name="PaymentRenewalInd" type="xsd:boolean"/>
+            <xsd:element name="PaymentStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="PayorCd" type="blg:OpenEnum"/>
+            <xsd:element name="PayorNumber" type="xsd:string"/>
+            <xsd:element name="PayrollDeductionInfo" type="blg:AL.PayrollDeductionInfo_Type"/>
+            <xsd:element name="PayrollDeductionInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PendingCancelDt" type="xsd:date"/>
+            <xsd:element name="PendingDayMonthDue" type="xsd:long"/>
+            <xsd:element name="PendingPaymentInd" type="xsd:boolean"/>
+            <xsd:element name="PendingPaymentSummaryRq" type="blg:AL.PendingPaymentSummaryRq_Type"/>
+            <xsd:element name="PendingPaymentSummaryRqExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PendingPaymentSummaryRs" type="blg:AL.PendingPaymentSummaryRs_Type"/>
+            <xsd:element name="PendingPaymentSummaryRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PersonInfo" type="blg:AL.PersonInfo_Type"/>
+            <xsd:element name="PersonInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PersonName" type="blg:AL.PersonName_Type"/>
+            <xsd:element name="PersonNameExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PhoneInfo" type="blg:AL.PhoneInfo_Type"/>
+            <xsd:element name="PhoneInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PhoneNumber" type="xsd:token"/>
+            <xsd:element name="PhoneTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="Policy" type="blg:AL.PCPOLICY"/>
+            <xsd:element name="PolicyEquityDt" type="xsd:date"/>
+            <xsd:element name="PolicyExt" type="blg:AL.PolicyExt_Type"/>
+            <xsd:element name="PolicyExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PaymentHistoryInfo" minOccurs="0"/>
+                        <xsd:element ref="blg:NSAInd" minOccurs="0"/>
+                        <xsd:element ref="blg:PolicyExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PolicyExt02">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:StatStateCd" minOccurs="0"/>
+                        <xsd:element ref="blg:AccountingCompanyCd" minOccurs="0"/>
+                        <xsd:element ref="blg:PolicyLoanInd" minOccurs="0"/>
+                        <xsd:element ref="blg:Form" minOccurs="0"/>
+                        <xsd:element ref="blg:PolicyExt03" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PolicyExt03">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PolicyTermCd" minOccurs="0"/>
+                        <xsd:element ref="blg:PolicyExt04" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PolicyExt04" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PolicyLoanInd" type="xsd:boolean"/>
+            <xsd:element name="PolicyNumber" type="xsd:string"/>
+            <xsd:element name="PolicyNumberRq" type="blg:AL.PolicyNumberRq_Type"/>
+            <xsd:element name="PolicyNumberRqExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:InputChannelCd" minOccurs="0"/>
+                        <xsd:element ref="blg:PolicyNumberRqExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PolicyNumberRqExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PolicyStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="PolicyTermCd" type="blg:OpenEnum"/>
+            <xsd:element name="PostDirectionCd" type="blg:OpenEnum"/>
+            <xsd:element name="PostalCode" type="xsd:string"/>
+            <xsd:element name="PostingTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="PreDirectionCd" type="blg:OpenEnum"/>
+            <xsd:element name="PreviousBalanceAmt" type="blg:CURRENCY"/>
+            <xsd:element name="PreviousBilledAmt" type="blg:CURRENCY"/>
+            <xsd:element name="PriorTermBalanceAmt" type="blg:CURRENCY"/>
+            <xsd:element name="Producer" type="blg:AL.Producer_Type"/>
+            <xsd:element name="ProducerExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="ProducerInfo" type="blg:AL.ProducerInfo_Type"/>
+            <xsd:element name="ProducerInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="ProducerRoleCd" type="blg:OpenEnum"/>
+            <xsd:element name="ProducerSubCode" type="xsd:string"/>
+            <xsd:element name="ProductItem" type="blg:AL.ProductItem_Type"/>
+            <xsd:element name="ProductItemExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="PurchaseCardLevel3Ind" type="xsd:boolean"/>
+            <xsd:element name="RangeDescription" type="xsd:string"/>
+            <xsd:element name="RangeEnd" type="xsd:long"/>
+            <xsd:element name="RangeInfo" type="blg:AL.RangeInfo_Type"/>
+            <xsd:element name="RangeInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RangeStart" type="xsd:long"/>
+            <xsd:element name="RangeTotalNum" type="xsd:long"/>
+            <xsd:element name="RateControl" type="xsd:string"/>
+            <xsd:element name="ReTokenizationCd" type="blg:OpenEnum"/>
+            <xsd:element name="ReceiptDt" type="xsd:date"/>
+            <xsd:element name="ReferenceNumber" type="xsd:string"/>
+            <xsd:element name="RegionalOfficeCd" type="blg:OpenEnum"/>
+            <xsd:element name="RegionalOperationsCenterCd" type="blg:OpenEnum"/>
+            <xsd:element name="ReinstateEffectiveDt" type="blg:Date"/>
+            <xsd:element name="RelatedPolicyNumber" type="xsd:string"/>
+            <xsd:element name="RemittanceInfo" type="blg:AL.RemittanceInfo_Type"/>
+            <xsd:element name="RemittanceInfoExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RenewalCycleCd" type="blg:OpenEnum"/>
+            <xsd:element name="RetrieveBillingInfoForPaymentRq" type="blg:AL.RetrieveBillingInfoForPaymentRq_Type"/>
+            <xsd:element name="RetrieveBillingInfoForPaymentRqExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:CarrierAdminSubSystemCd" minOccurs="0"/>
+                        <xsd:element ref="blg:StatStateCd" minOccurs="0"/>
+                        <xsd:element ref="blg:LOBCd" minOccurs="0"/>
+                        <xsd:element ref="blg:RetrieveBillingInfoForPaymentRqExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="RetrieveBillingInfoForPaymentRqExt01" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrieveBillingInfoForPaymentRs" type="blg:AL.RetrieveBillingInfoForPaymentRs_Type"/>
+            <xsd:element name="RetrieveBillingInfoForPaymentRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrieveBillingPreferencesRq" type="blg:AL.RetrieveBillingPreferencesRq_Type"/>
+            <xsd:element name="RetrieveBillingPreferencesRqExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrieveBillingPreferencesRs" type="blg:AL.RetrieveBillingPreferencesRs_Type"/>
+            <xsd:element name="RetrieveBillingPreferencesRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrievePaymentHistoryRq" type="blg:AL.RetrievePaymentHistoryRq_Type"/>
+            <xsd:element name="RetrievePaymentHistoryRqExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrievePaymentHistoryRs" type="blg:AL.RetrievePaymentHistoryRs_Type"/>
+            <xsd:element name="RetrievePaymentHistoryRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrievePolicyStatusRq" type="blg:AL.RetrievePolicyStatusRq_Type"/>
+            <xsd:element name="RetrievePolicyStatusRqExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RetrievePolicyStatusRs" type="blg:AL.RetrievePolicyStatusRs_Type"/>
+            <xsd:element name="RetrievePolicyStatusRsExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="RunningBalanceAmt" type="blg:CURRENCY"/>
+            <xsd:element name="SICCd" type="blg:OpenEnum"/>
+            <xsd:element name="SPPPayorCd" type="blg:OpenEnum"/>
+            <xsd:element name="SPPPayorInd" type="xsd:boolean"/>
+            <xsd:element name="ScheduledPaymentPeriod" type="blg:DURATION"/>
+            <xsd:element name="SeasonalPremiumInd" type="xsd:boolean"/>
+            <xsd:element name="SecurityId" type="xsd:string"/>
+            <xsd:element name="SegmentNumber" type="xsd:string"/>
+            <xsd:element name="SourceSystemCd" type="blg:OpenEnum"/>
+            <xsd:element name="StartDt" type="xsd:date"/>
+            <xsd:element name="StartTs" type="xsd:dateTime"/>
+            <xsd:element name="StatStateCd" type="blg:OpenEnum"/>
+            <xsd:element name="StateProv" type="xsd:string"/>
+            <xsd:element name="StateProvCd" type="blg:OpenEnum"/>
+            <xsd:element name="StreetName" type="xsd:string"/>
+            <xsd:element name="StreetNumber" type="xsd:string"/>
+            <xsd:element name="StreetTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="SubsequentInstallmentPct" type="xsd:decimal"/>
+            <xsd:element name="Surname" type="xsd:string"/>
+            <xsd:element name="TaxAmt" type="blg:CURRENCY"/>
+            <xsd:element name="TaxDt" type="xsd:date"/>
+            <xsd:element name="TaxExemptStateProvCd" type="blg:OpenEnum"/>
+            <xsd:element name="TaxId" type="xsd:string"/>
+            <xsd:element name="TaxIdTypeCd" type="blg:OpenEnum"/>
+            <xsd:element name="TaxIdentity" type="blg:AL.TaxIdentity_Type"/>
+            <xsd:element name="TaxIdentityExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="TermInstallmentsCount" type="xsd:integer"/>
+            <xsd:element name="TermProcessDt" type="xsd:date"/>
+            <xsd:element name="TerminationEffectiveDt" type="xsd:dateTime"/>
+            <xsd:element name="TerminationReasonCd" type="blg:OpenEnum"/>
+            <xsd:element name="ThirdPartyPayor" type="blg:AL.ThirdPartyPayor_Type"/>
+            <xsd:element name="ThirdPartyPayorExt">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:PayorNumber" minOccurs="0"/>
+                        <xsd:element ref="blg:BillingPayorStatusCd" minOccurs="0"/>
+                        <xsd:element ref="blg:ThirdPartyPayorExt01" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ThirdPartyPayorExt01">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="blg:ListBillingOutputDescCd" minOccurs="0"/>
+                        <xsd:element ref="blg:ThirdPartyPayorExt02" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ThirdPartyPayorExt02" type="blg:AL.Extension_Type"/>
+            <xsd:element name="TitlePrefix" type="xsd:string"/>
+            <xsd:element name="ToAcct" type="blg:AL.ToAcct_Type"/>
+            <xsd:element name="ToAcctExt" type="blg:AL.Extension_Type"/>
+            <xsd:element name="Token" type="xsd:string"/>
+            <xsd:element name="TokenRefGUID" type="xsd:string"/>
+            <xsd:element name="TokenStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="TotalDueAmt" type="blg:CURRENCY"/>
+            <xsd:element name="TotalSurchargeAmt" type="blg:CURRENCY"/>
+            <xsd:element name="TransExeTimestamp" type="xsd:dateTime"/>
+            <xsd:element name="TransactionEffectiveDt" type="xsd:dateTime"/>
+            <xsd:element name="TransactionRequestDt" type="xsd:dateTime"/>
+            <xsd:element name="TransactionResponseDt" type="xsd:dateTime"/>
+            <xsd:element name="TransactionStatusCd" type="blg:OpenEnum"/>
+            <xsd:element name="TransferAmt" type="blg:CURRENCY"/>
+            <xsd:element name="UnderwritingReferralCd" type="blg:OpenEnum"/>
+            <xsd:element name="UnitMeasurementCd" type="blg:OpenEnum"/>
+            <xsd:element name="UnitNumber" type="xsd:string"/>
+            <xsd:element name="WebsiteURL" type="xsd:anyURI"/>
+            <xsd:element name="WrittenAmt" type="blg:CURRENCY"/>
+        </xsd:schema>
+        <xs:schema xmlns="http://allstate.com/xml/standard/soapHeader/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://allstate.com/xml/standard/soapHeader/v1" version="1.2011-04-21" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:complexType name="versionExt_Type">
+                <xs:sequence>
+                    <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax" namespace="##targetNamespace"/>
+                </xs:sequence>
+                <xs:anyAttribute processContents="lax" namespace="##targetNamespace"/>
+            </xs:complexType>
+            <xs:element name="msgHeader">
+                <xs:annotation>
+                    <xs:documentation>SOAP Header for request, response and publish messages</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="msgId" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Unique identifier for the message. It is reccomended that the Id be represented as a GUID. If that is not the case the combination of the message Id and sendingSystemCd should be unique (message Id should be unique within the system that genarted the message)
+If the identical message is generated multiple times the msgId should not change but the reSendCount should increment every time</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="resendCount" type="xs:integer" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Number of times the same message was resent. If the element is not present in the XML message, the message represents the first/original instance. resendCount with a value of 1 means thet the message has been resent once</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="msgDateTime" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Message creation Timestamp. For messages that have the reSendCountt value set, it is the timestamp of the re-tried message not the original/first message</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sendingSystemCd" type="xs:token">
+                            <xs:annotation>
+                                <xs:documentation>This is the identifier for the system or application as assigned by the the cmdb database.
+The sendingSystemApplicationId can be used to determine the origin of the message for routing purposes</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="xmlInterfaceVersion" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>This is the version of the XML  interface or contract to which this message adheres
+
+This represents a version identifier that can be used to determine the version of all XSD and, for Web Services, WSDL files that are used to define the content of the SOAP message that is defined by this header</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sendingSystemInfo" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Information about the system or application that generated the XML message</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="systemId">
+                                        <xs:annotation>
+                                            <xs:documentation>System or Application Id is a string that serves as an identifier for a system or application. Use of a server name defining the originating system is assumed</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:minLength value="0"/>
+                                                <xs:maxLength value="36"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="cmsApplicationCd" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>This is the identifier for the system or application within the Universal Codes Tables and Allstate Data Guide metadata repository</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="systemName" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>This is the descriptive name of the system or application that originated the message</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:minLength value="0"/>
+                                                <xs:maxLength value="255"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="systemVersion" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>This is the version of the system or application that originated the message</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:minLength value="0"/>
+                                                <xs:maxLength value="255"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="versionExt" type="ns1:versionExt_Type" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="processingContextInfo" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Context in which this message was created</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="processId" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Identifier of a Major Business or Technology Process</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="subProcessId" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Identifier of a Business or Technology Sub Process</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="taskId" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Identifier of a Business or Technology Task</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="versionExt" type="ns1:versionExt_Type" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="relatedMsgId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Identifier of the request message to which this message is a response.
+This must be present for all response messages and is not applicable to request or publish messages</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="conversationId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Conversation Identifier facilitates a common identifier across a set of messages that are exchanged between several parties. Conversation Id has been provided to supports more complex messages exchange patterns where messages travel through intermediaries or a message exchanges between two parties consists of multiple messages (single request with multiple replies)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="debugOverrideInd" type="xs:boolean" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Debug override indicator lspecifies if the application should provide debugg information or not</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="versionExt" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="userRoleCd" type="xs:token" minOccurs="0"/>
+                                    <xs:element name="userId" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="versionExt" minOccurs="0">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="conversationSystemCd" type="xs:token" minOccurs="0"/>
+                                                <xs:element name="versionExt2" minOccurs="0">
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="CustLangPref" type="xs:token" minOccurs="0"/>
+                                                            <xs:element name="versionExt3" type="ns1:versionExt_Type" minOccurs="0">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:service name="BillingInquiryService">
+        <wsdl:port name="billingInquiryService" binding="tns:billingInquiryServiceBinding">
+            <soap:address location="https://billinginquiryservice-ro-tib-pdaa.igslb.allstate.com:29578/BusinessProcesses/BillingInquiryService/StarterProcesses/BillingInquiryService"/>
+        </wsdl:port>
+    </wsdl:service>
+    <wsdl:portType name="billingInquiry">
+        <wsdl:operation name="PendingPaymentSummary">
+            <wsdl:input message="tns:msgPendingPaymentSummaryRequest"/>
+            <wsdl:output message="tns:msgPendingPaymentSummaryResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingTransactionHistory">
+            <wsdl:input message="tns:msgRetrieveTransactionHistoryRequest"/>
+            <wsdl:output message="tns:msgRetrieveTransactionHistoryResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="RetrievePolicyStatus">
+            <wsdl:input message="tns:msgRetrievePolicyStatusRequest"/>
+            <wsdl:output message="tns:msgRetrievePolicyStatusResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingActivity">
+            <wsdl:input message="tns:msgRetrieveBillingActivityRequest"/>
+            <wsdl:output message="tns:msgRetrieveBillingActivityResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingHistory">
+            <wsdl:input message="tns:msgRetrieveBillingHistoryRequest"/>
+            <wsdl:output message="tns:msgRetrieveBillingHistoryResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="RetrieveBillingPreferences">
+            <wsdl:input message="tns:msgRetrieveBillingPrefencesRequest"/>
+            <wsdl:output message="tns:msgRetrieveBillingPrefencesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingSummary">
+            <wsdl:input message="tns:msgRetrieveBillingSummaryRequest"/>
+            <wsdl:output message="tns:msgRetrieveBillingSummaryResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBankName">
+            <wsdl:input message="tns:msgRetrieveBankNameRequest"/>
+            <wsdl:output message="tns:msgRetrieveBankNameResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="RetrieveBillingInfoForPayment">
+            <wsdl:input message="tns:msgRetrieveBillingInfoForPaymentRequest"/>
+            <wsdl:output message="tns:msgRetrieveBillingInfoForPaymentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="retrievePaymentInfo">
+            <wsdl:input message="tns:msgRetrievePaymentInfoRequest"/>
+            <wsdl:output message="tns:msgRetrievePaymentInfoResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="RetrievePaymentHistory">
+            <wsdl:input message="tns:msgRetrievePaymentHistoryRequest"/>
+            <wsdl:output message="tns:msgRetrievePaymentHistoryResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="billingInquiryServiceBinding" type="tns:billingInquiry">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="PendingPaymentSummary">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/PendingPaymentSummary"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="PendingPaymentSummaryIn"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="PendingPaymentSummaryOut"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingTransactionHistory">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/retrieveBillingTransactionHistory"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="billingTransHistInfoIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="billingTransHistInfoOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RetrievePolicyStatus">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/RetrievePolicyStatus"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="RetrievePolicyStatusIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="RetrievePolicyStatusOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingActivity">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/retrieveBillingActivity"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="billingActivityInfoIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="billingActivityInfoOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingHistory">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/retrieveBillingHistory"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="billingHistoryInfoIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="billingHistoryInfoOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RetrieveBillingPreferences">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/RetrieveBillingPreferences"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="RetrieveBillingPrefencesIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="RetrieveBillingPrefencesOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBillingSummary">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/retrieveBillingSummary"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="policyNbrIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="summaryOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrieveBankName">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/retrieveBankName"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="ABANbrIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="bankInfoOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RetrieveBillingInfoForPayment">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/RetrieveBillingInfoForPayment"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="RetrieveBillingInfoForPaymentIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="RetrieveBillingInfoForPaymentOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="retrievePaymentInfo">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/retrievePaymentInfo"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="policyNbrIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="installmentInfoOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RetrievePaymentHistory">
+            <soap:operation style="document" soapAction="/BusinessProcesses/BillingInquiryService/StarterProcesses/ServiceBillingInquiryService.serviceagent/billingInquiryService/RetrievePaymentHistory"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="RetrievePaymentHistoryIn"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="RetrievePaymentHistoryOut"/>
+                <soap:header use="literal" message="tns:msgHeader" part="header"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:message name="msgPendingPaymentSummaryRequest">
+        <wsdl:part name="PendingPaymentSummaryIn" element="ns0:PendingPaymentSummaryRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgPendingPaymentSummaryResponse">
+        <wsdl:part name="PendingPaymentSummaryOut" element="ns0:PendingPaymentSummaryRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgHeader">
+        <wsdl:part name="header" element="ns1:msgHeader"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveTransactionHistoryRequest">
+        <wsdl:part name="billingTransHistInfoIn" element="ns0:BillingTransactionHistoryRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveTransactionHistoryResponse">
+        <wsdl:part name="billingTransHistInfoOut" element="ns0:BillingTransactionHistoryRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrievePolicyStatusRequest">
+        <wsdl:part name="RetrievePolicyStatusIn" element="ns0:RetrievePolicyStatusRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrievePolicyStatusResponse">
+        <wsdl:part name="RetrievePolicyStatusOut" element="ns0:RetrievePolicyStatusRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingActivityRequest">
+        <wsdl:part name="billingActivityInfoIn" element="ns0:BillingActivityRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingActivityResponse">
+        <wsdl:part name="billingActivityInfoOut" element="ns0:BillingActivityRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingHistoryRequest">
+        <wsdl:part name="billingHistoryInfoIn" element="ns0:BillingHistoryRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingHistoryResponse">
+        <wsdl:part name="billingHistoryInfoOut" element="ns0:BillingHistoryRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingPrefencesRequest">
+        <wsdl:part name="RetrieveBillingPrefencesIn" element="ns0:RetrieveBillingPreferencesRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingPrefencesResponse">
+        <wsdl:part name="RetrieveBillingPrefencesOut" element="ns0:RetrieveBillingPreferencesRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingSummaryRequest">
+        <wsdl:part name="policyNbrIn" element="ns0:BillingSummaryByPolicyNumberRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingSummaryResponse">
+        <wsdl:part name="summaryOut" element="ns0:BillingSummaryRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBankNameRequest">
+        <wsdl:part name="ABANbrIn" element="ns0:BankInfoByABANumberRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBankNameResponse">
+        <wsdl:part name="bankInfoOut" element="ns0:BankInfoRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingInfoForPaymentRequest">
+        <wsdl:part name="RetrieveBillingInfoForPaymentIn" element="ns0:RetrieveBillingInfoForPaymentRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrieveBillingInfoForPaymentResponse">
+        <wsdl:part name="RetrieveBillingInfoForPaymentOut" element="ns0:RetrieveBillingInfoForPaymentRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrievePaymentInfoRequest">
+        <wsdl:part name="policyNbrIn" element="ns0:PaymentInfoByPolicyNumberRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrievePaymentInfoResponse">
+        <wsdl:part name="installmentInfoOut" element="ns0:PaymentInfoRs"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrievePaymentHistoryRequest">
+        <wsdl:part name="RetrievePaymentHistoryIn" element="ns0:RetrievePaymentHistoryRq"/>
+    </wsdl:message>
+    <wsdl:message name="msgRetrievePaymentHistoryResponse">
+        <wsdl:part name="RetrievePaymentHistoryOut" element="ns0:RetrievePaymentHistoryRs"/>
+    </wsdl:message>
+</wsdl:definitions>

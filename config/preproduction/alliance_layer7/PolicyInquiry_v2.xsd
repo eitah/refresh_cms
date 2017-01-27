@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Nina Abaya (Allstate Insurance Company) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.allstate.com/product/PolicyInquiry/v2" targetNamespace="http://www.allstate.com/product/PolicyInquiry/v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<date>2014-07-20T18:58:01.834-05:00</date>
+			<release>sv-pcs-ssib-policyinquiry-2x-v2-rel-1</release>
+			<cabinet>sv-pcs-ssib-policyinquiry-2x-v2</cabinet>
+			<build>sv-pcs-ssib-policyinquiry-2x-v2-build-4</build>
+		</xsd:appinfo>
+		<xsd:documentation>      	The declarations in this file are auto-generated
+	from an object model under management by igniteXML.
+	You are advised not to modify this file. If you need
+	to make any modifications, apply your edits to the
+	object model in the igniteXML repository and generate
+	a new release.
+
+    </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="PolicyQuoteOrPolicy_v2.xsd"/>
+	<xsd:element name="CaseId" type="xsd:string"/>
+	<xsd:element name="PolicyInquiryRq" type="PolicyInquiryRq_Type"/>
+	<xsd:complexType name="PolicyInquiryRq_Type">
+		<xsd:sequence>
+			<xsd:element ref="CaseId"/>
+			<xsd:element ref="ServiceRequest"/>
+			<xsd:element ref="QuoteOrPolicy"/>
+			<xsd:element ref="PolicyInquiryRqExt" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="PolicyInquiryRqExt" type="AL.Extension_Type"/>
+	<xsd:element name="PolicyInquiryRs" type="PolicyInquiryRs_Type"/>
+	<xsd:complexType name="PolicyInquiryRs_Type">
+		<xsd:sequence>
+			<xsd:element ref="MsgStatus" maxOccurs="unbounded"/>
+			<xsd:element ref="CaseId" minOccurs="0"/>
+			<xsd:element ref="ServiceRequest" minOccurs="0"/>
+			<xsd:element ref="QuoteOrPolicy" minOccurs="0"/>
+			<xsd:element ref="PolicyInquiryRsExt" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="PolicyInquiryRsExt" type="AL.Extension_Type"/>
+</xsd:schema>

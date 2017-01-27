@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by ALLSTATE INSURANCE COMPANY (ALLSTATE INSURANCE COMPANY) -->
+<xs:schema xmlns="http://allstate.com/xml/standard/soapHeader/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://allstate.com/xml/standard/soapHeader/v1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2011-04-21">
+	<xs:complexType name="versionExt_Type">
+		<xs:sequence>
+			<xs:any namespace="##targetNamespace" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##targetNamespace" processContents="lax"/>
+	</xs:complexType>
+	<xs:element name="msgHeader">
+		<xs:annotation>
+			<xs:documentation>SOAP Header for request, response and publish messages</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="msgId" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Unique identifier for the message. It is reccomended that the Id be represented as a GUID. If that is not the case the combination of the message Id and sendingSystemCd should be unique (message Id should be unique within the system that genarted the message)
+If the identical message is generated multiple times the msgId should not change but the reSendCount should increment every time</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="resendCount" type="xs:integer" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Number of times the same message was resent. If the element is not present in the XML message, the message represents the first/original instance. resendCount with a value of 1 means thet the message has been resent once</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="msgDateTime" type="xs:dateTime">
+					<xs:annotation>
+						<xs:documentation>Message creation Timestamp. For messages that have the reSendCountt value set, it is the timestamp of the re-tried message not the original/first message</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="sendingSystemCd" type="xs:token">
+					<xs:annotation>
+						<xs:documentation>This is the identifier for the system or application as assigned by the the cmdb database.
+The sendingSystemApplicationId can be used to determine the origin of the message for routing purposes</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="xmlInterfaceVersion" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>This is the version of the XML  interface or contract to which this message adheres
+
+This represents a version identifier that can be used to determine the version of all XSD and, for Web Services, WSDL files that are used to define the content of the SOAP message that is defined by this header</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="sendingSystemInfo" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Information about the system or application that generated the XML message</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="systemId">
+								<xs:annotation>
+									<xs:documentation>System or Application Id is a string that serves as an identifier for a system or application. Use of a server name defining the originating system is assumed</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="0"/>
+										<xs:maxLength value="36"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="cmsApplicationCd" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>This is the identifier for the system or application within the Universal Codes Tables and Allstate Data Guide metadata repository</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="systemName" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>This is the descriptive name of the system or application that originated the message</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="0"/>
+										<xs:maxLength value="255"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="systemVersion" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>This is the version of the system or application that originated the message</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="0"/>
+										<xs:maxLength value="255"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="versionExt" type="versionExt_Type" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="processingContextInfo" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Context in which this message was created</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="processId" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Identifier of a Major Business or Technology Process</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="subProcessId" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Identifier of a Business or Technology Sub Process</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="taskId" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Identifier of a Business or Technology Task</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="versionExt" type="versionExt_Type" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="relatedMsgId" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Identifier of the request message to which this message is a response.
+This must be present for all response messages and is not applicable to request or publish messages</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="conversationId" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Conversation Identifier facilitates a common identifier across a set of messages that are exchanged between several parties. Conversation Id has been provided to supports more complex messages exchange patterns where messages travel through intermediaries or a message exchanges between two parties consists of multiple messages (single request with multiple replies)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="debugOverrideInd" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Debug override indicator lspecifies if the application should provide debugg information or not</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="versionExt" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="userRoleCd" type="xs:token" minOccurs="0"/>
+							<xs:element name="userId" type="xs:string" minOccurs="0"/>
+							<xs:element name="versionExt" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="conversationSystemCd" type="xs:token" minOccurs="0"/>
+										<xs:element name="versionExt2" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CustLangPref" type="xs:token" minOccurs="0"/>
+													<xs:element name="versionExt3" type="versionExt_Type" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Generic schema version extension point for facilitating backward/forward compatible minor SOAP header schema version changes</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

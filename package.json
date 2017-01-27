@@ -1,0 +1,45 @@
+{
+  "name": "cmsrefresh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Elijah Itah, Scott Albers and the Allstate Billing Explanation team",
+  "license": "ISC",
+  "bin": {
+    "refresh": "./index.js"
+  },
+  "jest": {
+    "verbose": true,
+    "automock": true,
+    "unmockedModulePathPatterns": [
+      "/node_modules/bluebird",
+      "/node_modules/lodash",
+      "/node_modules/react",
+      "/node_modules/babel-runtime",
+      "/node_modules/redux",
+      "/node_modules/redux-thunk",
+      "/node_modules/enzyme",
+      "/node_modules/react-dom",
+      "/node_modules/react-router",
+      "/node_modules/react-router-redux",
+      "/node_modules/redux-saga",
+      "/node_modules/core-js",
+      "/node_modules/winston",
+      "/node_modules/soap/"
+    ]
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "moment": "^2.15.1",
+    "soap": "^0.16.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.2",
+    "jest": "^17.0.3",
+    "mocha": "^3.1.2"
+  }
+}
